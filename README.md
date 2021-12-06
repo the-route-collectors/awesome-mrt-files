@@ -12,5 +12,6 @@ A collection of great MRT files that might break your parser.
 - https://www.isolario.it/Isolario_MRT_data/Alderaan/2019_12/rib.20191211.0800.bz2 (from [issue](https://github.com/CAIDA/libparsebgp/issues/76))
 - http://archive.routeviews.org/route-views.amsix/bgpdata/2020.06/UPDATES/updates.20200617.1830.bz2 (from [issue](https://github.com/bgpkit/bgpkit-parser/issues/31))
   - both bgpkit-parser and bgpscanner seems to have issue with this file.
-  - it's likely related to extended community, but not sure.
-  - seems only happens to amsix collector from routeviews.
+  - ~it's likely related to extended community, but not sure.~
+  - it is caused by add-path messages being wrapped in wrong message types
+  - relevant issue from bgpdump: https://github.com/RIPE-NCC/bgpdump/issues/9
